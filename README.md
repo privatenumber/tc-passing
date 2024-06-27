@@ -10,12 +10,12 @@ When integrating TypeScript into a large codebase, using `tsc --noEmit` type-che
 
 `tc-passing` records the list of files that pass type check so you can be sure your type safe files remain type safe!
 
+<br>
 
 <p align="center">
 	<a href="https://github.com/sponsors/privatenumber/sponsorships?tier_id=398771"><img width="412" src="https://raw.githubusercontent.com/privatenumber/sponsors/master/banners/assets/donate.webp"></a>
 	<a href="https://github.com/sponsors/privatenumber/sponsorships?tier_id=397608"><img width="412" src="https://raw.githubusercontent.com/privatenumber/sponsors/master/banners/assets/sponsor.webp"></a>
 </p>
-<p align="center"><sup><i>Already a sponsor?</i> Join the discussion in the <a href="https://github.com/pvtnbr/tsx">Development repo</a>!</sup></p>
 
 ## 🚀 Install
 
