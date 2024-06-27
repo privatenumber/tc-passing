@@ -77,34 +77,35 @@ By default, `tc-passing` will expect you to have [`typescript`](https://www.npmj
 
 ## FAQ
 
-### How does tc-passing compare to [tsc-baseline](https://npmjs.com/package/tsc-baseline)?
+### How does `tc-passing` compare to [`tsc-baseline`](https://npmjs.com/package/tsc-baseline)?
 
 Both tools aim to streamline TypeScript integration, but they approach baselining differently:
 
 #### tsc-baseline
 - **Focus**
 
-	Only show new type errors since last baseline update.
+	Show only the new type errors since last baseline update.
 
 - **Baseline file**
 
-	JSON file of errors, which can grow large and may lead to merge conflicts in team settings.
+	JSON file of errors. Can grow large and may lead to merge conflicts in team settings.
 
 - **Workflow impact**
 
-	Requires frequent updates to maintain an accurate baseline, often necessitating updates with every TypeScript-related commit. Otherwise CI can fail. Running `tsc` on every commit can slow down development.
+	Requires frequent updates to maintain an accurate baseline, often necessitating updates with every TypeScript-related commit. Running `tsc` on every commit can slow down development. A notable issue is it doesn't propagate errors to the exit code so CI doesn't fail.
 
 #### tc-passing
 - **Focus**
 
-	Type checking ensures files that were previously passing type checks to remain error-free.
+	Only type check files that were previously passing to ensure they remain error-free.
 
 - **Baseline file**
 
-	List of passing files, which is typically smaller and easier to manage, reducing merge conflicts.
+	Text file of passing files. Readable and easy to manage, reducing merge conflicts. Also shows progress to 100% type safety.
+
 - **Workflow impact**
 
-	Needs updates less frequently, only necessary when files change from failing to passing, thus streamlining the development process by minimizing the frequency of checks.
+	Updating the baseline is generally optional. Recommended when failing files are now passing. Necessary when more type errors are being introduced and they need to be ignored.
 
 
 ## Sponsors
